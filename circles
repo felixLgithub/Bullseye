@@ -5,10 +5,11 @@ t.penup()
 n = 1
 #t.speed(100)
 
-x = int(input("what X pos?"))
-y = int(input("what Y pos?"))
+
 
 def BULLSEYE():
+  x = int(input("what X pos?"))
+  y = int(input("what Y pos?"))
   for p in range(10):
 
     k = random.randint(1, 4)
