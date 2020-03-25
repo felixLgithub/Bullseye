@@ -1,43 +1,26 @@
 import turtle
+import random
 t = turtle.Turtle()
+t.penup()
+n = 1
 
-t.color("red")
-t.begin_fill()
-t.circle(100)
-t.end_fill()
 
-t.left(90)
-t.forward(20)
-t.right(90)
+for p in range(10):
+  k = random.randint(1, 4)
+  if k == 1:
+    c = "red"
+  elif k == 2:
+    c = "blue"
+  elif k == 3:
+    c = "black"
+  elif k == 4:
+    c = "orange"
 
-t.color("black")
-t.begin_fill()
-t.circle(80)
-t.end_fill()
+  t.color(c)
+  t.begin_fill()
+  t.circle(200 - 20*n)
+  t.end_fill()
+  t.setpos(0,20*n)
+  n = n + 1
 
-t.left(90)
-t.forward(20)
-t.right(90)
 
-t.color("red")
-t.begin_fill()
-t.circle(60)
-t.end_fill()
-
-t.left(90)
-t.forward(20)
-t.right(90)
-
-t.color("black")
-t.begin_fill()
-t.circle(40)
-t.end_fill()
-
-t.left(90)
-t.forward(20)
-t.right(90)
-
-t.color("red")
-t.begin_fill()
-t.circle(20)
-t.end_fill()
