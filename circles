@@ -3,24 +3,30 @@ import random
 t = turtle.Turtle()
 t.penup()
 n = 1
+#t.speed(100)
 
+x = int(input("what X pos?"))
+y = int(input("what Y pos?"))
 
-for p in range(10):
-  k = random.randint(1, 4)
-  if k == 1:
-    c = "red"
-  elif k == 2:
-    c = "blue"
-  elif k == 3:
-    c = "black"
-  elif k == 4:
-    c = "orange"
+def BULLSEYE():
+  for p in range(10):
 
-  t.color(c)
-  t.begin_fill()
-  t.circle(200 - 20*n)
-  t.end_fill()
-  t.setpos(0,20*n)
-  n = n + 1
+    k = random.randint(1, 4)
+    if k == 1:
+      c = "red"
+    elif k == 2:
+      c = "blue"
+    elif k == 3:
+      c = "black"
+    elif k == 4:
+      c = "orange"
+    global n
+    t.setpos(x ,y + 20*n)
+    t.color(c)
+    t.begin_fill()
+    t.circle(200 - 20*n)
+    t.end_fill()
+    
+    n = n + 1
 
-
+BULLSEYE()
